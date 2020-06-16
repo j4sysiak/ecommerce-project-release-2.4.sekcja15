@@ -12,7 +12,6 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
   currentCategoryId: number;
-  currentCategoryName: string;
   searchMode: boolean;
 
   constructor(private productService: ProductService,
@@ -37,8 +36,6 @@ export class ProductListComponent implements OnInit {
 
   }
 
-
-
   handleSearchProducts() {
 
     const theKeyword: string = this.route.snapshot.paramMap.get('keyword');
@@ -50,8 +47,6 @@ export class ProductListComponent implements OnInit {
       }
     )
   }
-
-
 
   handleListProducts() {
 
@@ -74,5 +69,4 @@ export class ProductListComponent implements OnInit {
       }
     )    
   }
-
 }
